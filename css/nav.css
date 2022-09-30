@@ -112,26 +112,54 @@
     position: relative;
     padding:10px 30px/*如果文字间隔不合理可以微调修改，第二个是水平方向的padding，第一个是垂直的*/
 }
-.mask-name-container {
-  max-width: 1200px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-@media screen and (max-width: 768px) {
-  .mask-name-container {
-    width: 600px;
+center#name-container {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'ZhuZiAYuanJWD';
   }
-}
-@media screen and (max-width: 500px) {
-  .mask-name-container {
-    display: none;
+  .nav-fixed.nav-visible #name-container {
+    top: 60px;
+    transition: 0.3s;
   }
-}
+  .nav-fixed.nav-visible #menus .menus_items {
+    bottom: -0px;
+    transition: 0.3s;
+    line-height: 60px;
+  }
+  .nav-fixed #menus .menus_items {
+    bottom: 60px;
+    transition: 0.3s;
+  }
+  .nav-fixed #name-container {
+    top: 15%;
+    transition: 0.3s;
+  }
+  #name-container {
+    bottom: 60px;
+  }
+  
+  .mask-name-container {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mask-name-container {
+      width: 600px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .mask-name-container {
+      display: none;
+    }
+  }
 
 
 
