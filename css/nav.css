@@ -112,54 +112,73 @@
     position: relative;
     padding:10px 30px/*如果文字间隔不合理可以微调修改，第二个是水平方向的padding，第一个是垂直的*/
 }
+
+#name-container:hover {
+  transform: translateX(-50%) scale(1.03);
+}
+#page-name {
+  position: relative;
+  padding: 10px 30px;
+}
+
 center#name-container {
-    position: absolute;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'ZhuZiAYuanJWD';
-  }
-  .nav-fixed.nav-visible #name-container {
-    top: 60px;
-    transition: 0.3s;
-  }
-  .nav-fixed.nav-visible #menus .menus_items {
-    bottom: -0px;
-    transition: 0.3s;
-    line-height: 60px;
-  }
-  .nav-fixed #menus .menus_items {
-    bottom: 60px;
-    transition: 0.3s;
-  }
-  .nav-fixed #name-container {
-    top: 15%;
-    transition: 0.3s;
-  }
-  #name-container {
-    bottom: 60px;
-  }
-  
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'ZhuZiAYuanJWD';
+}
+.nav-fixed.nav-visible #name-container {
+  top: 60px;
+  transition: 0.3s;
+}
+.nav-fixed.nav-visible #menus .menus_items {
+  bottom: -0px;
+  transition: 0.3s;
+  line-height: 60px;
+}
+.nav-fixed #menus .menus_items {
+  bottom: 60px;
+  transition: 0.3s;
+}
+.nav-fixed #name-container {
+  top: 15%;
+  transition: 0.3s;
+}
+#name-container {
+  bottom: 60px;
+}
+
+.mask-name-container {
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 768px) {
   .mask-name-container {
-    max-width: 1200px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    overflow: hidden;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 600px;
   }
-  
-  @media screen and (max-width: 768px) {
-    .mask-name-container {
-      width: 600px;
-    }
+}
+@media screen and (max-width: 500px) {
+  .mask-name-container {
+    display: none;
   }
-  @media screen and (max-width: 500px) {
-    .mask-name-container {
-      display: none;
-    }
-  }
+}
+#sidebar #sidebar-menus .menus_items .site-page:hover {
+  color: var(--anzhiyu-white);
+  border-radius: var(--anzhiyu-border-radius);
+}
+#nav .menus_items .menus_item > a > i:last-child {
+  display: none;
+}
+#nav #search-button {
+  font-size: 1.3em;
+}
 
 
 
